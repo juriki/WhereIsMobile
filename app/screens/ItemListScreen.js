@@ -74,6 +74,9 @@ const ItemListScreen = ({ route }) => {
   };
 
   const openMapScreen = () => {
+
+
+
     if (selectedItem && selectedItem.location) {
       console.log("Selected item location:", selectedItem.location); // Проверка координат
   
@@ -86,6 +89,7 @@ const ItemListScreen = ({ route }) => {
       // Закрытие модального окна
       setModalVisible(false); // Закрываем модальное окно
     } else {
+      console.log('Передача в MapScreen:', coordinates, title);
       Alert.alert("Virhe", "Tämän kohteen sijaintia ei löytynyt.");
     }
   };
